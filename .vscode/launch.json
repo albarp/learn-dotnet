@@ -29,6 +29,17 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            "name": "Run Unit Tests",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-test",
+            "program": "dotnet",
+            "args": ["test"],
+            "cwd": "${workspaceFolder}/app/app.test",
+            "stopAtEntry": false,
+            "console": "internalConsole"
         }
     ]
 }

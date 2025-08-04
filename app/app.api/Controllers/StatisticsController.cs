@@ -12,8 +12,12 @@ public class StatisticsController : ControllerBase {
         _statistics = statistics;
     }
 
-    [HttpGet("average")]
-    public IActionResult GetAverage(){
-        return Ok(_statistics.Average());
+    [HttpPost("average")]
+    public IActionResult GetAverage([FromBody] int[] numbers) {
+        if (numbers == null || numbers.Length == 0) {
+            return BadRequest("Numbers array cannot be null or empty");
+        }
+        
+        return Ok(_statistics.Average(numbers));
     }
 }

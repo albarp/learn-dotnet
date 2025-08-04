@@ -2,9 +2,13 @@ namespace app.domain;
 
 public class Statistics
 {
-    public double Average()
+    public double Average(int[] numbers)
     {
-        // Implementation to be added later
-        throw new NotImplementedException();
+        if (numbers == null || numbers.Length == 0)
+        {
+            throw new ArgumentException("Numbers array cannot be null or empty");
+        }
+        
+        return numbers.Average();
     }
 } 
