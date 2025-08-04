@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Register Statistics class for dependency injection
+builder.Services.AddScoped<app.domain.Statistics>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
