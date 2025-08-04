@@ -1,0 +1,11 @@
+@api_HostAddress = http://localhost:9090
+
+GET {{api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{api_HostAddress}}/api/statistics/average
+Accept: application/json
+
+###
